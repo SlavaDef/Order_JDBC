@@ -5,25 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="897b73c3-f5de-4f28-b3df-31d348a2d9cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/constats/Constats.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/dao/clientDao/ClientDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/dao/clientDao/ClientDaoImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/dao/goodsDao/GoodsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/dao/ordersDao/OrdersDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/entyti/Clients.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/entyti/Goods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/entyti/Orders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/storage/ConnectionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/TZ" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db1.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/dao/goodsDao/GoodsDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/constats/Constats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/constats/Constats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/dao/clientDao/ClientDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/dao/clientDao/ClientDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/dao/goodsDao/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/dao/goodsDao/GoodsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/entyti/Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/entyti/Clients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/entyti/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/entyti/Goods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709832861012</updated>
-      <workItem from="1709832862156" duration="7302000" />
+      <workItem from="1709832862156" duration="12530000" />
     </task>
     <servers />
   </component>

@@ -67,7 +67,7 @@ public class ClientDaoImp implements ClientDao {
                     while (rs.next()) {
                         Clients clients = new Clients();
 
-                        clients.setId(rs.getLong(1));
+                        clients.setClient_id(rs.getLong(1));
                         clients.setFullName(rs.getString(2));
                         clients.setPhone(rs.getString(3));
                         clients.setAddress(rs.getString(4));

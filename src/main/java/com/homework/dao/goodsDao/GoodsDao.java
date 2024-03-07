@@ -8,7 +8,10 @@ public interface GoodsDao {
 
     void createTable();
 
-    Goods addClient();
+    Goods addGood(String good_name, String good_brand, String characteristics, int good_weight,
+                    Long good_price, boolean availability);
 
     List<Goods> getAll();
+
+    void createRandomGoods();
 }
