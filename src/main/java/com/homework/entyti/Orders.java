@@ -1,54 +1,32 @@
 package com.homework.entyti;
 
-import java.util.Date;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import java.sql.Date;
+
+@NoArgsConstructor
+@Getter
+@Setter
 public class Orders {
 
     private Long order_id;
 
-    private String info;
+    private String order_info;
 
-    private Date date;
+    private Date order_date;
 
-    public Orders() {
-    }
-
-    public Orders(Long order_id, String info, Date date) {
-        this.order_id = order_id;
-        this.info = info;
-        this.date = date;
-    }
-
-    public Long getId() {
-        return order_id;
-    }
-
-    public void setId(Long order_id) {
-        this.order_id = order_id;
-    }
-
-    public String getInfo() {
-        return info;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
+    public Orders(String order_info, Date order_date) {
+        this.order_info = order_info;
+        this.order_date = order_date;
     }
 
     @Override
     public String toString() {
-        return "Orders{" +
-                "id=" + order_id +
-                ", info='" + info + '\'' +
-                ", date=" + date +
-                '}';
+        return "Orders" +
+                "order_id=" + order_id +
+                ", order_info='" + order_info + '\'' +
+                ", order_date=" + order_date;
     }
 }

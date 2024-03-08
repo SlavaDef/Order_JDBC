@@ -19,15 +19,15 @@ public class Goods {
 
     private String characteristics;
 
-    private int good_weight;
+    private double good_weight;
 
-    private Long good_price;
+    private double good_price;
 
     private boolean availability;
 
 
-    public Goods(String good_name, String good_brand, String characteristics, int good_weight,
-                 Long good_price, boolean availability) {
+    public Goods(String good_name, String good_brand, String characteristics, double good_weight,
+                 double good_price, boolean availability) {
         this.good_name = good_name;
         this.good_brand = good_brand;
         this.characteristics = characteristics;

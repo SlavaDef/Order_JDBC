@@ -8,6 +8,7 @@ import java.util.List;
 
 import static com.homework.constats.Constats.CREATE_CLIENTS_SQL;
 import static com.homework.constats.Constats.INIT_CLIENT_SQL;
+import static com.homework.utils.Utils.getRandomName;
 
 public class ClientDaoImp implements ClientDao {
 
@@ -51,9 +52,9 @@ public class ClientDaoImp implements ClientDao {
     }
 
     public void createRandomClients() {
-        addClient("Jon Doe", "099-882-31-11", "Kyiv, Banderu street 7", "Jon@gmail.com.ua");
-        addClient("Bob Marli", "055-444-22-66", "Kyiv, St.Lt street 19", "Bob_M@gmail.com.ua");
-        addClient("Nicolas Keidj", "099-456-34-24", "New Yourk,Some street 15", "KeiJ@gmail.com.ua");
+        addClient(getRandomName(), "099-882-31-11", "Kyiv, Banderu street 7", "Jon@gmail.com.ua");
+        addClient(getRandomName(), "055-444-22-66", "Kyiv, St.Lt street 19", "Bob_M@gmail.com.ua");
+        addClient(getRandomName(), "099-456-34-24", "New Yourk,Some street 15", "KeiJ@gmail.com.ua");
     }
 
     @Override

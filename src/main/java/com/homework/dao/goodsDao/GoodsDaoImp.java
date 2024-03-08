@@ -1,6 +1,5 @@
 package com.homework.dao.goodsDao;
 
-import com.homework.entyti.Clients;
 import com.homework.entyti.Goods;
 
 import java.sql.*;
@@ -11,11 +10,8 @@ import static com.homework.constats.Constats.*;
 
 public class GoodsDaoImp implements GoodsDao {
 
-
     private final Connection conn;
-
     private final String table;
-
 
     public GoodsDaoImp(Connection conn) {
         this.conn = conn;
@@ -35,15 +31,16 @@ public class GoodsDaoImp implements GoodsDao {
     }
 
     @Override
-    public Goods addGood(String good_name, String good_brand, String characteristics, int good_weight,
-                         Long good_price, boolean availability) {
+    public Goods addGood(String good_name, String good_brand, String characteristics, double good_weight,
+                         double good_price, boolean availability) {
+
         try {
             try (PreparedStatement st = conn.prepareStatement(INIT_GOODS_SQL)) {
                 st.setString(1, good_name);
                 st.setString(2, good_brand);
                 st.setString(3, characteristics);
-                st.setInt(4, good_weight);
-                st.setLong(5, good_price);
+                st.setDouble(4, good_weight);
+                st.setDouble(5, good_price);
                 st.setBoolean(6, availability);
                 st.executeUpdate();
             }
@@ -68,8 +65,8 @@ public class GoodsDaoImp implements GoodsDao {
                         goods.setGood_name(rs.getString(2));
                         goods.setGood_brand(rs.getString(3));
                         goods.setCharacteristics(rs.getString(4));
-                        goods.setGood_weight(rs.getInt(5));
-                        goods.setGood_price(rs.getLong(6));
+                        goods.setGood_weight(rs.getDouble(5));
+                        goods.setGood_price(rs.getDouble(6));
                         goods.setAvailability(rs.getBoolean(7));
 
                         res.add(goods);
@@ -83,14 +80,13 @@ public class GoodsDaoImp implements GoodsDao {
         }
     }
 
-
     @Override
     public void createRandomGoods() {
-        addGood("Toster", "Lg", "Some characteristics", 8,
-                215L, true);
-        addGood("Vacuum cleaner", "SAMSUNG", "Some characteristics", 12,
-                855L, true);
-        addGood("Table", "Brain", "Some characteristics", 6,
-                88L, false);
+        addGood("Toster", "LG", "Some characteristics", 8.5,
+                215.25, true);
+        addGood("Vacuum cleaner", "SAMSUNG", "Some characteristics", 12.2,
+                855.99, true);
+        addGood("Table", "Brain", "Some characteristics", 6.7,
+                88.88, false);
     }
 }

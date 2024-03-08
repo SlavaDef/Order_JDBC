@@ -8,8 +8,8 @@ public interface GoodsDao {
 
     void createTable();
 
-    Goods addGood(String good_name, String good_brand, String characteristics, int good_weight,
-                    Long good_price, boolean availability);
+    Goods addGood(String good_name, String good_brand, String characteristics, double good_weight,
+                    double good_price, boolean availability);
 
     List<Goods> getAll();
 
