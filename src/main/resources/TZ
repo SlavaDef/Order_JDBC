@@ -1,7 +1,2 @@
-db.url=jdbc:mysql://localhost/apartaments?serverTimezone=Europe/Kiev
-db.user=root
-db.password=1234
-db.driver=com.mysql.cj.jdbc.Driver
-
 2) Створити проект "База даних замовлень". Створити таблиці «Товари», «Клієнти» та «Замовлення».
 Написати код для додавання нових клієнтів, товарів та оформлення замовлень.

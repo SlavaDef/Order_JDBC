@@ -1,12 +1,8 @@
 package com.homework.dao.ordersDao;
 
-
-import com.homework.entyti.Goods;
 import com.homework.entyti.Orders;
 
 import java.sql.*;
-//import java.util.*;
-//import java.util.Date;
 
 import java.util.ArrayList;
 import java.util.List;
