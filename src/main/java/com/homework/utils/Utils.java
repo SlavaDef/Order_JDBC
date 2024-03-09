@@ -40,6 +40,12 @@ public class Utils {
         return list.get(ThreadLocalRandom.current().nextInt(4));
     }
 
+    public static <T> void printinEntity(List<T> t){
+        for (T cl : t) {
+            System.out.println(cl);
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println(getRandomTimestamp());
         System.out.println(getRandomName());

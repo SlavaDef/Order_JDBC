@@ -83,6 +83,4 @@ public class OrdersDaoImp implements OrdersDao {
         addOrder("Some info", new Date(getRandomTimestamp().getTime()));
 
     }
-
-
 }
