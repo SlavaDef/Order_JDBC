@@ -6,6 +6,7 @@ import com.homework.dao.goodsDao.GoodsDao;
 import com.homework.dao.goodsDao.GoodsDaoImp;
 import com.homework.dao.ordersDao.OrdersDao;
 import com.homework.dao.ordersDao.OrdersDaoImp;
+import com.homework.entyti.Clients;
 import com.homework.storage.ConnectionFactory;
 
 import java.sql.Connection;
@@ -30,7 +31,7 @@ public class App {
             dao2.createTable();
 
             dao.createRandomClients();
-            dao.addClient(getRandomName(), "099-00-00-00", "Varshava,Nogi street 22", "Adm_1@gmail.com.ua");
+            dao.addClient(new Clients(getRandomName(), "099-00-00-00", "Varshava,Nogi street 22", "Adm_1@gmail.com.ua"));
 
             printinEntity(dao.getAll());
 

@@ -27,7 +27,6 @@ public class ClientDaoImp implements ClientDao {
         try (Statement st = conn.createStatement()) {
             st.execute("DROP TABLE IF EXISTS " + table);
             st.execute(CREATE_CLIENTS_SQL);
-            //  st.execute("ALTER TABLE " + table + " AUTO_INCREMENT=50");
 
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
@@ -35,26 +34,29 @@ public class ClientDaoImp implements ClientDao {
     }
 
     @Override
-    public Clients addClient(String fullName, String phone, String address, String email) {
+    public Clients addClient(Clients clients) {
         try {
             try (PreparedStatement st = conn.prepareStatement(INIT_CLIENT_SQL)) {
-                st.setString(1, fullName);
-                st.setString(2, phone);
-                st.setString(3, address);
-                st.setString(4, email);
+                st.setString(1, clients.getFullName());
+                st.setString(2, clients.getPhone());
+                st.setString(3, clients.getAddress());
+                st.setString(4, clients.getEmail());
                 st.executeUpdate();
             }
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         }
         System.out.println("A new client has been aded");
-        return new Clients(fullName, phone, address, email);
+        return new Clients(clients.getFullName(), clients.getPhone(),clients.getAddress(), clients.getEmail());
     }
 
     public void createRandomClients() {
-        addClient(getRandomName(), "099-882-31-11", "Kyiv, Banderu street 7", "Jon@gmail.com.ua");
-        addClient(getRandomName(), "055-444-22-66", "Kyiv, St.Lt street 19", "Bob_M@gmail.com.ua");
-        addClient(getRandomName(), "099-456-34-24", "New Yourk,Some street 15", "KeiJ@gmail.com.ua");
+        addClient(new Clients(getRandomName(), "099-882-31-11", "Kyiv, Banderu street 7",
+                "Jon@gmail.com.ua"));
+        addClient(new Clients(getRandomName(), "055-444-22-66", "Kyiv, St.Lt street 19",
+                "Bob_M@gmail.com.ua"));
+        addClient(new Clients(getRandomName(), "099-456-34-24", "New Yourk,Some street 15",
+                "KeiJ@gmail.com.ua"));
     }
 
     @Override

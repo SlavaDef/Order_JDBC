@@ -8,7 +8,7 @@ public interface ClientDao {
 
     void createTable();
 
-    Clients addClient(String fullName, String phone, String address,String email);
+    Clients addClient(Clients clients);
 
     List<Clients> getAll();
 
